@@ -16,9 +16,10 @@ public:
     void display() {
         if (!myQueue.empty()) {
             std::cout << "Queue Elements: ";
+            // Display elements while the queue is not empty
             while (!myQueue.empty()) {
-                std::cout << myQueue.front() << " ";
-                myQueue.pop();
+                std::cout << myQueue.front() << " "; // Display the front element
+                myQueue.pop(); // Remove the front element
             }
             std::cout << "\n";
         }
@@ -34,20 +35,22 @@ int main() {
     int choice, element;
 
     do {
+        // Display menu options
         std::cout << "\n1. Enqueue\n";
         std::cout << "2. Display\n";
         std::cout << "3. Quit\n";
         std::cout << "Enter your choice: ";
         std::cin >> choice;
 
+        // Perform actions based on user choice
         switch (choice) {
         case 1:
             std::cout << "Enter the element to enqueue: ";
             std::cin >> element;
-            dynamicQueue.enqueue(element);
+            dynamicQueue.enqueue(element); // Enqueue the element
             break;
         case 2:
-            dynamicQueue.display();
+            dynamicQueue.display(); // Display the queue
             break;
         case 3:
             std::cout << "Exiting the program. Goodbye!\n";
@@ -56,7 +59,7 @@ int main() {
             std::cout << "Invalid choice. Please enter a valid option.\n";
         }
 
-    } while (choice != 3);
+    } while (choice != 3); // Continue until the user chooses to quit
 
     return 0;
 }

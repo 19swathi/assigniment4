@@ -8,7 +8,6 @@ struct TreeNode {
 
     TreeNode(int val) : data(val), left(nullptr), right(nullptr) {}
 };
-
 // Function to insert a node into the binary tree
 TreeNode* insertNode(TreeNode* root, int value) {
     // Base case: if the current subtree is empty, create a new node with the given value

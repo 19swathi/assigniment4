@@ -25,5 +25,4 @@ int main() {
     // Don't forget to free the dynamically allocated memory
     delete[] dynamicArray;
 
-    return 0;
-}
+    return
